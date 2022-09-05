@@ -6,9 +6,9 @@ pub mod mymodule;
 use anyhow::Result;
 use env_logger::Env;
 
+use clap::Parser;
 use log::info;
 use log::warn;
-use structopt::StructOpt;
 
 use crate::mymodule::frobnicate;
 
@@ -20,16 +20,16 @@ fn run(widgets: u32) -> Result<()> {
     Ok(())
 }
 
-#[derive(Debug, StructOpt)]
-#[structopt(name = "{{project-name}}", about = "TODO: better description")]
+#[derive(Debug, Parser)]
+#[clap(author, version, about = "TODO: better description")]
 struct Opts {
-    #[structopt(short, long)]
+    #[clap(value_parser, short, long)]
     widgets: u32,
 }
 
 fn main() -> Result<()> {
     // default log level to info
-    // env_logger::init();
+    // set RUST_LOG in environment to override
     env_logger::Builder::from_env(Env::default().default_filter_or("info")).init();
 
     let opts = Opts::from_args_safe()?;

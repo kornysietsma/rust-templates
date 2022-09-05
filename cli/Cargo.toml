@@ -14,8 +14,8 @@ anyhow = "~1.0"
 itertools = "~0.10"
 derive_builder = "~0.11"
 lazy_static = "~1.4"
-structopt = "~0.3"
+clap = { version = "~3.2", features = ["derive"] }
 log = "~0.4"
 env_logger = "~0.9"
 [dev-dependencies]
-pretty_assertions = "~1.2"
+pretty_assertions = "~1.3"
