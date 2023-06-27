@@ -32,7 +32,7 @@ fn main() -> Result<()> {
     // set RUST_LOG in environment to override
     env_logger::Builder::from_env(Env::default().default_filter_or("info")).init();
 
-    let opts = Opts::from_args_safe()?;
+    let opts = Opts::parse();
 
     run(opts.widgets)
 }
