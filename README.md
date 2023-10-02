@@ -2,15 +2,25 @@
 
 This is where I store my rust templates
 
-There's only one so far:
+There's a few so far:
 
-## cli
+- cli-simple - a simple command-line app in a single module
+- cli - a sligtly more complex command-line app with a lib.rs and integration tests 
 
-This is a basic command-line app template.
+## using templates
 
-Create an app based on it using [cargo-generate](https://cargo-generate.github.io/cargo-generate/index.html)
+For each template you can create an app based on it using [cargo-generate](https://cargo-generate.github.io/cargo-generate/index.html)
 
-When you have `cargo generate` installed you can run
+install cargo-generate:
 
-`cargo generate kornysietsma/rust-templates cli`
+```sh
+cargo install cargo-generate
+```
 
+generate a project based on a template
+
+```sh
+cargo generate kornysietsma/rust-templates cli-simple
+```
+
+You will be prompted for the project name
