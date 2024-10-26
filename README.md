@@ -24,3 +24,34 @@ cargo generate kornysietsma/rust-templates cli-simple
 ```
 
 You will be prompted for the project name
+
+## Updating the templates
+
+This is more of a reminder for me than anything!
+
+You can't actually compile the templates in place, so you basically need to work on copies.
+
+First open the `cli` and `cli-smple templates here and:
+
+- update cargo.toml
+- update anything else like cargo-generate.toml
+- make a new blank directory
+- run cargo generate:
+
+```shell
+cargo install cargo-generate
+cargo generate --path $HOME/Dropbox/prj/dev/rust/rust-templates/cli-simple
+# and
+cargo generate --path $HOME/Dropbox/prj/dev/rust/rust-templates/cli
+```
+
+then check each works:
+
+```shell
+cargo update
+cargo build
+cargo test
+cargo run -- -h
+```
+
+then copy back `Cargo.lock` and anything else that might need updating.

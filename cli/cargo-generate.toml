@@ -1,5 +1,5 @@
 [template]
-cargo_generate_version = ">=0.18.1"
+cargo_generate_version = ">=0.22.0"
 
 [hooks]
 post = ["post-script.rhai"]
