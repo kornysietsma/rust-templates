@@ -1,7 +1,8 @@
 #![forbid(unsafe_code)]
 #![warn(clippy::all)]
 #![warn(rust_2018_idioms)]
-#![warn(rust_2021_compatibility)]
+#![warn(rust_2024_compatibility)]
+#![warn(deprecated_safe)]
 pub mod mymodule;
 
 use anyhow::Result;
