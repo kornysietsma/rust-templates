@@ -1,8 +1,12 @@
-# rust script sample
+# minimal rust script sample
 
-This is not a template - it's more of a sample.
+This is not a template - it's more of a minimal sample.
 
 It demonstrates using the experimental rust script mode, where you can create a single script which bundles all dependencies - in this case [script.rs](./script.rs)
+
+This is very similar to the bigger [script](../script/) sample but it is even more minimal - no logging, simpler cli parsing, less structure just enough to build small scripts, especially useful for use in an AI-based tool.
+
+I do assume you'll need some commandline parameters though - this could be even more minimal without them.  And I leave in unit tests and clippy and warnings, because AI tools really need them!
 
 ## Running
 
