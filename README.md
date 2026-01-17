@@ -6,6 +6,7 @@ There's a few so far:
 
 - cli-simple - a simple command-line app in a single module
 - cli - a sligtly more complex command-line app with a lib.rs and integration tests 
+- script - a simple single-file script - this isn't a template as cargo-generate doesn't handle scripts yet! Just copy the script.rs and edit it.
 
 ## using templates
 
